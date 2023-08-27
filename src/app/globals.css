@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 
+/* Add this to your CSS */
+.dotted-pattern {
+  background-image: radial-gradient(#ddd 1px, transparent 1px), radial-gradient(#ddd 1px, transparent 1px);
+  background-size: 28px 28px; /* Adjust the size of the dots */
+}

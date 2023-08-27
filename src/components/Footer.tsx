@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import '../app/globals.css' 
 
 const Footer = () => {
   return (
-    <div className="h-12 md:h-24 p-4 lg:px-20 xl:px-40 text-red-500 flex items-center justify-between">
+    <div className="h-12 md:h-24 p-4 lg:px-20 xl:px-40 text-red-500 flex items-center justify-between dotted-pattern">
       <Link href="/" className="font-bold text-xl">EAZYBITE</Link>
       <p>© ALL RIGHTS RESERVED.</p>
     </div>
