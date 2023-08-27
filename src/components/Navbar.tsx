@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link href="/">Contact</Link>
       </div>
       {/* LOGO */}
-      <div className="text-2xl md:font-bold flex-1 md:text-center">
+      <div className="text-2xl md:font-bold font-bold flex-1 md:text-center">
         <Link href="/">EAZYBITE</Link>
       </div>
       {/* MOBILE MENU */}
