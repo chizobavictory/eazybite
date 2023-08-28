@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="h-12 md:h-24 p-4 lg:px-20 xl:px-40 text-red-500 flex items-center justify-between dotted-pattern border-t-2 border-t-red-500 ">
       <Link href="/" className="font-bold text-xl">EAZYBITE</Link>
-      <p className="">© CHIZOBA VICTORY.</p>
+      <p className="">© CHIZOBA VICTORY 2023</p>
     </div>
   );
 };
