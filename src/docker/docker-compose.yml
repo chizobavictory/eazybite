@@ -1,0 +1,12 @@
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: vchizoba
+      POSTGRES_PASSWORD: qwerty123
+      POSTGRES_DB: mydb
+    ports:
+      - 5433:5432
+
