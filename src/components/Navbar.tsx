@@ -4,6 +4,7 @@ import Link from "next/link";
 import CartIcon from "./CartIcon";
 import Image from "next/image";
 import "../app/globals.css";
+import UserLinks from "./UserLinks";
 
 const Navbar = () => {
   const user = false;
@@ -25,7 +26,7 @@ const Navbar = () => {
       </div>
       {/* RIGHT LINKS */}
       <div className="hidden md:flex gap-4 items-center justify-end flex-1">
-        {!user ? <Link href="/login">Login</Link> : <Link href="/orders">Orders</Link>}
+        <UserLinks />
         <CartIcon />
       </div>
     </div>
