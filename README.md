@@ -35,3 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## docker compose up
 ## npx prisma migrate dev
+
+In this project I am using nextAuth for google sign in and prisma for database.
