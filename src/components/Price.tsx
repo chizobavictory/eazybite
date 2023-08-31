@@ -35,12 +35,13 @@ const Price = ({ product }: { product: ProductType }) => {
       }),
       quantity: quantity,
     })
+    console.log(product)
     toast.success("The product added to the cart!")
   }
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-2xl font-bold">${total}</h2>
+      <h2 className="text-2xl font-bold">N{total}</h2>
       {/* OPTIONS CONTAINER */}
       <div className="flex gap-4">
         {product.options?.length &&
@@ -58,6 +59,7 @@ const Price = ({ product }: { product: ProductType }) => {
             </button>
           ))}
       </div>
+      
       {/* QUANTITY AND ADD BUTTON CONTAINER */}
       <div className="flex justify-between items-center">
         {/* QUANTITY */}
