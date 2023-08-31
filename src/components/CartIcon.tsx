@@ -20,7 +20,7 @@ const CartIcon = () => {
     <Link href={session?.user.isAdmin ? "/add" : "/cart"}>
       <div className="flex items-center gap-4">
         {session?.user.isAdmin ? (
-          <button className="p-1 bg-red-500 text-white rounded-md">Add product</button>
+          <button className="px-2 py-1 bg-red-500 text-white rounded-md">Add product</button>
         ) : (
           <span>Cart ({totalItems})</span>
         )}
