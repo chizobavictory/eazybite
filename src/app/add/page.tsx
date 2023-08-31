@@ -44,9 +44,7 @@ const AddPage = () => {
     router.push("/");
   }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setInputs((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
@@ -101,27 +99,21 @@ const AddPage = () => {
   };
 
   return (
-    <div className="p-4 lg:px-20 xl:px-40  flex items-center justify-center text-red-500">
-      <form onSubmit={handleSubmit} className="flex flex-wrap gap-6">
-        <h1 className="text-4xl mb-2 text-gray-300 font-bold">
-          Add New Product
-        </h1>
-        <div className="w-full flex flex-col gap-2 ">
-          <label
-            className="text-sm cursor-pointer flex gap-4 items-center"
-            htmlFor="file"
-          >
-            <Image src="/upload.png" alt="" width={30} height={20} />
-            <span>Upload Image</span>
-          </label>
-          <input
-            type="file"
-            onChange={handleChangeImg}
-            id="file"
-            className="hidden"
-          />
+    <div className="p-4 lg:px-40 xl:px-40flex items-center justify-center text-zinc-700">
+      <form onSubmit={handleSubmit} className="md:flex flex-col flex gap-6">
+        <div>
+          <h1 className="md:text-4xl text-xl  mb-2 text-gray-500 font-bold">Add New Product</h1>
         </div>
-        <div className="w-full flex flex-col gap-2 ">
+        <div className="w-full md:flex md:flex-col gap-2 ">
+          <div>
+            <label className="text-sm cursor-pointer flex gap-4 items-center" htmlFor="file">
+              <Image src="/upload.png" alt="" width={30} height={20} />
+              <span>Upload Image</span>
+            </label>
+          </div>
+          <input type="file" onChange={handleChangeImg} id="file" className="hidden" />
+        </div>
+        <div className=" w-full flex flex-col gap-2 ">
           <label className="text-sm">Title</label>
           <input
             className="ring-1 ring-red-200 p-4 rounded-sm placeholder:text-red-200 outline-none"
@@ -163,7 +155,7 @@ const AddPage = () => {
         </div>
         <div className="w-full flex flex-col gap-2">
           <label className="text-sm">Options</label>
-          <div className="flex">
+          <div className="flex md:flex-row flex-col">
             <input
               className="ring-1 ring-red-200 p-4 rounded-sm placeholder:text-red-200 outline-none"
               type="text"
@@ -178,10 +170,7 @@ const AddPage = () => {
               name="additionalPrice"
               onChange={changeOption}
             />
-            <button
-              className="bg-gray-500 p-2 text-white"
-              onClick={() => setOptions((prev) => [...prev, option])}
-            >
+            <button className="bg-gray-500 p-2 text-white" onClick={() => setOptions((prev) => [...prev, option])}>
               Add Option
             </button>
           </div>
@@ -190,11 +179,7 @@ const AddPage = () => {
               <div
                 key={opt.title}
                 className="p-2  rounded-md cursor-pointer bg-gray-200 text-gray-400"
-                onClick={() =>
-                  setOptions((prev) =>
-                    prev.filter((item) => item.title !== opt.title)
-                  )
-                }
+                onClick={() => setOptions((prev) => prev.filter((item) => item.title !== opt.title))}
               >
                 <span>{opt.title}</span>
                 <span className="text-xs"> (+ ${opt.additionalPrice})</span>
@@ -202,10 +187,7 @@ const AddPage = () => {
             ))}
           </div>
         </div>
-        <button
-          type="submit"
-          className="bg-red-500 p-4 text-white w-48 rounded-md relative h-14 flex items-center justify-center"
-        >
+        <button type="submit" className="bg-red-500 p-4 text-white w-full rounded-md relative h-14  items-center justify-center">
           Submit
         </button>
       </form>
